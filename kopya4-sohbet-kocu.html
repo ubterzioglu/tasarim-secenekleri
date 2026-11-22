@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ana sayfa, Kopya 4: Sohbet koçu (taslak)</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{--ground:#0F1A2E;--surface:#172540;--surface2:#1F3158;--ink:#EAF0FF;--muted:#A9B8D6;--glow:#5EEAD4;--peach:#FFB4A2;--line:#2B4070}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:18px;line-height:1.6;font-weight:500}
+h1,h2,h3{margin:0;font-weight:700;line-height:1.2}
+p{margin:0}
+a{color:var(--glow)}
+:focus-visible{outline:3px solid var(--glow);outline-offset:3px}
+.topnote{background:#000;color:#fff;text-align:center;font-size:15px;padding:8px 16px}
+header{max-width:900px;margin:0 auto;padding:18px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 20px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:24px;color:var(--ink);text-decoration:none}
+.logo i{display:inline-flex;width:38px;height:38px;border-radius:50%;background:var(--glow);color:#0B1426;align-items:center;justify-content:center;font-style:normal;font-size:20px;box-shadow:0 0 22px rgba(94,234,212,.5)}
+.sp{flex:1}
+.lk{display:inline-flex;align-items:center;min-height:44px;padding:0 10px;color:var(--ink);font-weight:600;font-size:16px;text-decoration:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:999px;border:0;background:var(--glow);color:#0B1426;font:700 17px/1 "DM Sans",sans-serif;text-decoration:none;cursor:pointer;box-shadow:0 0 26px rgba(94,234,212,.35)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line);box-shadow:none}
+.chat{max-width:760px;margin:0 auto;padding:24px 24px 56px;display:flex;flex-direction:column;gap:18px}
+.row{display:flex;gap:12px;align-items:flex-end}
+.row.me{justify-content:flex-end}
+.av{flex:none;width:40px;height:40px;border-radius:50%;background:var(--glow);color:#0B1426;display:flex;align-items:center;justify-content:center;font-weight:700}
+.bubble{max-width:620px;padding:16px 20px;border-radius:22px 22px 22px 6px;background:var(--surface);border:1px solid var(--line)}
+.row.me .bubble{border-radius:22px 22px 6px 22px;background:var(--surface2)}
+.bubble h1{font-size:34px;margin-bottom:10px}
+.bubble h2{font-size:24px;margin-bottom:8px}
+.bubble p+p{margin-top:10px}
+.muted{color:var(--muted);font-size:16px}
+.quick{display:flex;flex-wrap:wrap;gap:10px;margin:2px 0 0 52px}
+.q{display:inline-flex;align-items:center;min-height:46px;padding:0 18px;border-radius:999px;border:2px solid var(--glow);color:var(--glow);font:700 16px/1 "DM Sans",sans-serif;text-decoration:none;background:transparent}
+.q:hover{background:rgba(94,234,212,.12)}
+.card{margin-top:12px;padding:18px;border-radius:18px;background:var(--ground);border:1px solid var(--line)}
+.card .tag{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.card ul{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:17px}
+.card li.fix{padding:10px 14px;border-radius:12px;background:rgba(255,180,162,.14);border-left:4px solid var(--peach)}
+.card li.ok{color:var(--ink)}
+.card li.ok::before{content:"\2713\00a0";color:var(--glow);font-weight:700}
+.list{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:2px}
+.list a{display:flex;align-items:center;min-height:44px;font-weight:700;color:var(--glow);text-decoration:none}
+.list a:hover{text-decoration:underline}
+.grp{margin-top:14px}
+.grp h3{font-size:19px}
+footer{max-width:900px;margin:0 auto;padding:28px 24px 48px;color:var(--muted);font-size:16px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 28px;border-top:1px solid var(--line)}
+footer nav{display:flex;flex-wrap:wrap;gap:2px 16px}
+footer nav a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink);font-weight:600;text-decoration:none}
+@media (max-width:640px){.bubble h1{font-size:28px}.quick{margin-left:0}}
+</style>
+</head>
+<body>
+<div class="topnote">Taslak, Kopya 4: Sohbet koçu</div>
+<header>
+<a href="#" class="logo"><i>a</i>affa</a><span class="sp"></span>
+<a href="#" class="lk">CV analizi</a><a href="#" class="lk">Araçlar</a><a href="#" class="lk">TR</a><a href="#" class="btn ghost" style="min-height:44px;padding:0 20px;font-size:16px">Giriş yap</a>
+</header>
+
+<main class="chat">
+<div class="row"><span class="av" aria-hidden="true">a</span>
+<div class="bubble"><h1>Merhaba, ben affa. Başvurularınız cevapsız mı kalıyor?</h1>
+<p>Birçok şirket başvuruları önce bir yazılımla okuyor. Sizin CV'nizin o yazılıma nasıl göründüğüne birlikte bakabiliriz.</p></div></div>
+
+<div class="quick" role="group" aria-label="Yanıt seçenekleri">
+<a href="#" class="q">Evet, nedenini merak ediyorum</a>
+<a href="#" class="q">Sadece CV'mi kontrol etmek istiyorum</a>
+<a href="#" class="q">Belirli bir ilana başvuracağım</a>
+</div>
+
+<div class="row me"><div class="bubble">Önce CV'mi kontrol edelim.</div></div>
+
+<div class="row"><span class="av" aria-hidden="true">a</span>
+<div class="bubble"><p>Olur. Dosyanızı yükleyin; yazılımın ne okuduğunu ve en değerli üç düzeltmeyi göstereyim.</p>
+<p class="muted">Bu bir işe alım tahmini değildir. CV'nizin ne kadar okunabildiğini ölçer.</p>
+<div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:12px"><a href="#" class="btn">CV'mi yükle</a><a href="#" class="btn ghost">Metni yapıştır</a></div></div></div>
+
+<div class="row"><span class="av" aria-hidden="true">a</span>
+<div class="bubble"><p>Sonuç böyle görünür:</p>
+<div class="card"><p class="tag">Örnek rapor · sizin CV'niz değil</p>
+<ul><li class="ok">Telefon ve e-posta okunuyor</li><li class="ok">İş deneyimi tarihleri düzenli</li>
+<li class="fix">1. Tek sütuna geçin: iki sütun satırları karıştırıyor.</li><li class="fix">2. Bölüm başlıklarını sade yazın.</li><li class="fix">3. Simgeleri düz yazıyla değiştirin.</li></ul></div>
+<p class="muted" style="margin-top:12px">Her düzeltmenin yanında nedeni ve nasıl yapılacağı yazar.</p></div></div>
+
+<div class="row"><span class="av" aria-hidden="true">a</span>
+<div class="bubble"><h2>Başka bir konuda yardım ister misiniz?</h2>
+<div class="grp"><h3>CV'm hazır mı?</h3><ul class="list"><li><a href="#">CV analizi</a></li><li><a href="#">PDF'iniz farklı okuyuculara nasıl görünüyor?</a></li><li><a href="#">CV'nizde görünmeyen metin var mı?</a></li></ul></div>
+<div class="grp"><h3>Bu ilana başvuracağım</h3><ul class="list"><li><a href="#">CV ve ilan eşleştirme</a></li><li><a href="#">CV'yi ilana göre uyarla</a></li><li><a href="#">Ön yazı ve mülakat hazırlığı</a></li></ul></div>
+<div class="grp"><h3>Almanya'ya taşınıyorum</h3><ul class="list"><li><a href="#">İş kaynakları ve teklif karşılaştırma</a></li><li><a href="#">Maaş hesaplama ve taşınma planı</a></li></ul></div></div></div>
+
+<div class="row"><span class="av" aria-hidden="true">a</span>
+<div class="bubble"><h2>CV'nize ne olduğunu açıkça söyleyeyim</h2>
+<p>CV'niz önce sizin tarayıcınızda okunur ve puanlanır. Analiz ettiğinizde dosya, metin ve sonuç hesabınıza bağlı olarak saklanır ve 12 ay sonra silinir. Paylaşım bağlantılarında CV'nizden alınmış satırlar bulunmaz.</p>
+<p class="muted">Hesap, raporlarınızı sonra tekrar açabilmeniz için gerekli. Ücretsiz, kart istemiyoruz. <a href="#">Gizlilik ayrıntıları</a></p></div></div>
+</main>
+
+<footer>
+<p>© 2026 affa · Herkes için ücretsiz ATS kontrolü</p>
+<nav aria-label="Alt menü"><a href="#">Gizlilik</a><a href="#">KVKK</a><a href="#">Sık sorulan sorular</a><a href="#">Hakkında</a></nav>
+</footer>
+</body>
+</html>

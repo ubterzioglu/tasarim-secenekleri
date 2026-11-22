@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ana sayfa, Kopya 2 (taslak)</title>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root{
+  --ground:#FFF3E6; --ink:#2B2140; --muted:#5A4B70; --violet:#5A3DDC; --violet-d:#4528B8;
+  --mint:#8FE3C2; --sun:#FFD35C; --coral:#FF8F7E; --sky:#9CCBFF; --lav:#EFE6FF; --white:#FFFFFF;
+  --shade:70,40,120;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:Nunito,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:18px;line-height:1.6;font-weight:500}
+h1,h2,h3{font-family:Fredoka,Nunito,system-ui,sans-serif;font-weight:600;margin:0;line-height:1.12;letter-spacing:0}
+p{margin:0}
+a{color:var(--violet-d)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+:focus-visible{outline:4px solid var(--violet);outline-offset:3px}
+
+/* hamur: yumuşak, şişkin 3B yüzey */
+.dough{border-radius:32px;background:var(--white);
+  box-shadow:inset 0 8px 12px rgba(255,255,255,.75),inset 0 -12px 18px rgba(var(--shade),.12),0 20px 30px -10px rgba(var(--shade),.32)}
+.d-mint{background:var(--mint)} .d-sun{background:var(--sun)} .d-coral{background:var(--coral)} .d-sky{background:var(--sky)} .d-lav{background:var(--lav)}
+.d-violet{background:var(--violet);color:#fff}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 32px;border:0;border-radius:999px;font:700 18px/1 Nunito,system-ui,sans-serif;text-decoration:none;cursor:pointer;color:#fff;background:var(--violet);
+  box-shadow:inset 0 6px 8px rgba(255,255,255,.35),inset 0 -8px 12px rgba(0,0,0,.18),0 12px 20px -6px rgba(var(--shade),.55)}
+.btn-soft{background:#fff;color:var(--violet-d);box-shadow:inset 0 6px 8px rgba(255,255,255,.9),inset 0 -8px 12px rgba(var(--shade),.12),0 12px 20px -6px rgba(var(--shade),.3)}
+.btn-sun{background:var(--sun);color:var(--ink);box-shadow:inset 0 6px 8px rgba(255,255,255,.6),inset 0 -8px 12px rgba(120,70,0,.2),0 12px 20px -6px rgba(0,0,0,.35)}
+@media (prefers-reduced-motion:no-preference){
+  .btn,.pill,.tile{transition:transform .18s cubic-bezier(.3,1.6,.5,1)}
+  .btn:hover,.tile:hover{transform:translateY(-3px) scale(1.02)}
+  .btn:active{transform:translateY(2px) scale(.99)}
+}
+
+.topnote{background:var(--ink);color:#fff;text-align:center;font-size:15px;padding:8px 16px}
+header .bar{display:flex;flex-wrap:wrap;align-items:center;gap:12px 12px;padding:18px 24px;max-width:1120px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:Fredoka,sans-serif;font-weight:700;font-size:28px}
+.logo i{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--sun);font-style:normal;font-size:26px;
+  box-shadow:inset 0 5px 7px rgba(255,255,255,.7),inset 0 -7px 10px rgba(120,70,0,.2),0 8px 14px -5px rgba(var(--shade),.4)}
+nav.main{display:flex;flex-wrap:wrap;gap:2px;flex-grow:1}
+.pill{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border-radius:999px;color:var(--ink);font-weight:700;font-size:16px;text-decoration:none}
+.pill:hover{background:#fff}
+.lang{display:flex;gap:4px}
+.lang .pill[aria-current="true"]{background:#fff;box-shadow:inset 0 4px 6px rgba(255,255,255,.9),0 6px 10px -4px rgba(var(--shade),.3);color:var(--violet-d)}
+
+.hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:center;padding-top:48px;padding-bottom:88px}
+.chip{display:inline-block;padding:6px 16px;border-radius:999px;background:#fff;font-weight:800;font-size:15px;color:var(--violet-d);box-shadow:inset 0 4px 6px rgba(255,255,255,.9),0 6px 10px -4px rgba(var(--shade),.3)}
+.hero h1{font-size:52px;margin-top:20px}
+.hero .lead{font-size:20px;color:var(--muted);margin-top:22px;max-width:560px}
+.ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.note{font-size:15px;line-height:1.55;color:var(--muted);margin-top:22px;max-width:520px}
+
+.quest{padding:28px}
+.quest .tag{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.qtop{display:flex;align-items:center;gap:20px;margin-top:14px;flex-wrap:wrap}
+.ring{width:132px;height:132px;flex:none;filter:drop-shadow(0 10px 8px rgba(var(--shade),.28))}
+.ring text{font-family:Fredoka,sans-serif;font-weight:700}
+.qtext{flex:1 1 180px;min-width:0}
+.level{display:inline-block;padding:4px 14px;border-radius:999px;background:var(--sun);font-weight:800;font-size:14px;box-shadow:inset 0 3px 4px rgba(255,255,255,.7)}
+.qtext h2{font-size:24px;margin-top:8px}
+.bar-track{height:20px;border-radius:999px;background:#E6DCF6;box-shadow:inset 0 4px 6px rgba(var(--shade),.25);margin-top:12px;overflow:hidden}
+.bar-fill{height:100%;width:72%;border-radius:999px;background:var(--mint);box-shadow:inset 0 5px 6px rgba(255,255,255,.6),inset 0 -5px 6px rgba(0,60,40,.2)}
+.tasks{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.task{display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:20px;font-size:16.5px;font-weight:700;background:#fff;
+  box-shadow:inset 0 5px 7px rgba(255,255,255,.9),inset 0 -6px 9px rgba(var(--shade),.1),0 8px 14px -6px rgba(var(--shade),.25)}
+.task.done{background:var(--mint)}
+.task .dot{flex:none;display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#fff;font-weight:800;font-size:15px;box-shadow:inset 0 3px 4px rgba(255,255,255,.9),0 3px 6px rgba(var(--shade),.25)}
+.task .pts{margin-left:auto;font-weight:800;color:var(--violet-d);font-size:15px;white-space:nowrap}
+.badges{display:flex;gap:14px;margin-top:22px;align-items:flex-end;flex-wrap:wrap}
+.badge{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:13px;font-weight:800;text-align:center;width:84px}
+.badge span.b{display:inline-flex;align-items:center;justify-content:center;width:62px;height:62px;border-radius:50%;
+  box-shadow:inset 0 6px 8px rgba(255,255,255,.7),inset 0 -8px 12px rgba(var(--shade),.18),0 10px 16px -6px rgba(var(--shade),.4)}
+.badge.earned span.b{background:var(--sun)}
+.badge.locked span.b{background:#E6DCF6;color:#7B6C96}
+.badge.locked{color:var(--muted)}
+.fine{font-size:14px;color:var(--muted);margin-top:16px}
+
+section.block{padding:84px 0}
+.block h2{font-size:40px}
+.block .sub{font-size:19px;color:var(--muted);margin-top:12px;max-width:640px}
+.path{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:24px;margin-top:44px}
+.tile{padding:28px}
+.tile .n{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:#fff;font-family:Fredoka,sans-serif;font-weight:700;font-size:26px;
+  box-shadow:inset 0 5px 7px rgba(255,255,255,.9),inset 0 -7px 10px rgba(var(--shade),.15),0 8px 12px -5px rgba(var(--shade),.4)}
+.tile h3{font-size:26px;margin-top:18px}
+.tile p{margin-top:8px;font-size:17px}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px;margin-top:40px}
+.card{padding:30px}
+.card h3{font-size:25px}
+.card p{margin-top:8px;font-size:17px;color:var(--muted)}
+.card ul{list-style:none;margin:18px 0 0;padding:0}
+.card li a{display:flex;align-items:center;min-height:44px;font-weight:800;font-size:17px;color:var(--violet-d);text-decoration:none}
+.card li a:hover{text-decoration:underline}
+.blob{display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:20px;margin-bottom:16px;
+  box-shadow:inset 0 6px 8px rgba(255,255,255,.65),inset 0 -8px 12px rgba(var(--shade),.15),0 10px 14px -6px rgba(var(--shade),.4)}
+.final{padding:56px 40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px}
+.final h2{font-size:38px;max-width:560px}
+.final p{margin-top:10px;color:#E5DCFF;font-size:19px}
+footer{margin-top:84px;padding:36px 0 48px;font-size:16px;color:var(--muted)}
+footer .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 32px}
+footer nav{display:flex;flex-wrap:wrap;gap:4px 18px}
+footer nav a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink);font-weight:700;text-decoration:none}
+
+@media (max-width:640px){
+  .hero h1{font-size:38px}
+  .block h2{font-size:32px}
+  .final{padding:36px 24px}
+  .final h2{font-size:30px}
+  section.block{padding:60px 0}
+}
+</style>
+</head>
+<body>
+<div class="topnote">Taslak, Kopya 2: görevler ve rozetler henüz sitede yok, bu bir tasarım önerisidir</div>
+
+<header>
+<div class="bar">
+<a href="#" class="logo"><i>a</i>affa</a>
+<nav class="main" aria-label="Ana menü">
+<a href="#" class="pill">CV analizi</a><a href="#" class="pill">İlana göre kontrol</a><a href="#" class="pill">CV oluşturucu</a><a href="#" class="pill">Başvurular</a><a href="#" class="pill">Daha fazla</a>
+</nav>
+<div class="lang"><a href="#" class="pill" aria-current="true">TR</a><a href="#" class="pill">EN</a><a href="#" class="pill">DE</a></div>
+<a href="#" class="btn btn-soft" style="min-height:48px;padding:0 24px;font-size:16px">Giriş yap</a>
+</div>
+</header>
+
+<main>
+<section class="wrap hero">
+<div>
+<span class="chip">Ücretsiz · Kart istemiyoruz</span>
+<h1>CV'nizi birlikte güçlendirelim: her düzeltme bir adım ileri.</h1>
+<p class="lead">Dosyanızı yükleyin, neyin takıldığını görün ve düzeltmeleri küçük görevler gibi tek tek tamamlayın. Her adımda puanınızın nasıl değiştiğini görürsünüz.</p>
+<div class="ctas">
+<a href="#" class="btn">CV'mi yükle</a>
+<a href="#" class="btn btn-soft">Örnek yolculuğu gör</a>
+</div>
+<p class="note">Bu bir işe alım tahmini değildir. CV'nizin ne kadar okunabildiğini ölçer, düzeltmeleri değerine göre sıralar.</p>
+</div>
+
+<div class="dough quest" role="group" aria-label="Örnek yolculuk kartı">
+<p class="tag">Örnek yolculuk · sizin CV'niz değil</p>
+<div class="qtop">
+<svg class="ring" viewBox="0 0 120 120" role="img" aria-label="Örnek puan: 100 üzerinden 72">
+<circle cx="60" cy="60" r="48" fill="none" stroke="#E6DCF6" stroke-width="18"/>
+<circle cx="60" cy="60" r="48" fill="none" stroke="#5FD3A6" stroke-width="18" stroke-linecap="round" stroke-dasharray="217 301.6" transform="rotate(-90 60 60)"/>
+<text x="60" y="64" text-anchor="middle" font-size="34" fill="#2B2140">72</text>
+<text x="60" y="84" text-anchor="middle" font-size="12" fill="#5A4B70" style="font-family:Nunito,sans-serif;font-weight:700">/100 örnek</text>
+</svg>
+<div class="qtext">
+<span class="level">Seviye 2 · Okunuyor</span>
+<h2>Okunabilir CV'ye 3 görev kaldı</h2>
+<div class="bar-track" aria-hidden="true"><div class="bar-fill"></div></div>
+</div>
+</div>
+<ul class="tasks">
+<li class="task done"><span class="dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6B4F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Dosyanızı yüklediniz</li>
+<li class="task done"><span class="dot"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1F6B4F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Okunan metni incelediniz</li>
+<li class="task"><span class="dot">1</span>Tek sütuna geçin<span class="pts">+6 puan</span></li>
+<li class="task"><span class="dot">2</span>Başlıkları sadeleştirin<span class="pts">+3 puan</span></li>
+<li class="task"><span class="dot">3</span>Simgeleri düz yazıya çevirin<span class="pts">+2 puan</span></li>
+</ul>
+<div class="badges">
+<div class="badge earned"><span class="b"><svg width="30" height="30" viewBox="0 0 24 24" fill="#2B2140" aria-hidden="true"><polygon points="12,3 14.6,9 21,9.6 16.2,13.9 17.6,20.2 12,17 6.4,20.2 7.8,13.9 3,9.6 9.4,9"/></svg></span>İlk analiz</div>
+<div class="badge locked"><span class="b"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="3"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>3 düzeltme</div>
+<div class="badge locked"><span class="b"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="3"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>Okunabilir CV</div>
+</div>
+<p class="fine">Puanlar, görevler ve rozetler örnektir.</p>
+</div>
+</section>
+
+<section class="block" style="background:#FFE7CF">
+<div class="wrap">
+<h2>Yolculuk dört durak</h2>
+<p class="sub">Her durakta tek bir iş var. Acele yok, istediğiniz yerde bırakıp sonra devam edebilirsiniz.</p>
+<div class="path">
+<div class="dough tile d-mint"><span class="n">1</span><h3>Yükle</h3><p>PDF, Word ya da yapıştırılan metin.</p></div>
+<div class="dough tile d-sky"><span class="n">2</span><h3>Gör</h3><p>Yazılımın CV'nizden okuduğu metni olduğu gibi görün.</p></div>
+<div class="dough tile d-sun"><span class="n">3</span><h3>Düzelt</h3><p>Görevleri değerine göre sırayla tamamlayın.</p></div>
+<div class="dough tile d-coral"><span class="n">4</span><h3>Hazır</h3><p>CV'niz okunur olunca ilana uyarlamaya geçin.</p></div>
+</div>
+</div>
+</section>
+
+<section class="block">
+<div class="wrap">
+<h2>Küçük hedefler, kimseyle yarışmadan</h2>
+<p class="sub">Oyunlaştırma burada motivasyon içindir, baskı için değil.</p>
+<div class="three">
+<div class="dough card"><span class="blob d-mint"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2B2140" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><h3>Görevler</h3><p>Her düzeltme tek bir küçük görev. Bitirince işaretlenir, puandaki değişim hemen görünür.</p></div>
+<div class="dough card"><span class="blob d-sun"><svg width="28" height="28" viewBox="0 0 24 24" fill="#2B2140" aria-hidden="true"><polygon points="12,3 14.6,9 21,9.6 16.2,13.9 17.6,20.2 12,17 6.4,20.2 7.8,13.9 3,9.6 9.4,9"/></svg></span><h3>Rozetler</h3><p>İlk analiz, ilk üç düzeltme, okunabilir CV. Rozetler yalnızca sizin içindir, kimseye gösterilmez.</p></div>
+<div class="dough card"><span class="blob d-sky"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2B2140" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v9l5 3"/><circle cx="12" cy="12" r="9"/></svg></span><h3>Sakin tempo</h3><p>Günlük seri, sıralama ya da geri sayım yok. Bıraktığınız yerden dönersiniz.</p></div>
+</div>
+</div>
+</section>
+
+<section class="block" style="background:#FFE7CF">
+<div class="wrap">
+<h2>Bugün ne yapmak istiyorsunuz?</h2>
+<p class="sub">Araç adlarını bilmenize gerek yok. Durumunuzu seçin.</p>
+<div class="three">
+<div class="dough card"><span class="blob d-mint"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2B2140" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M10 12h5M10 16h5"/></svg></span><h3>CV'm hazır mı?</h3><p>Dosyanızın okunabilirliğini ve gizli sorunları kontrol edin.</p>
+<ul><li><a href="#">CV analizi</a></li><li><a href="#">PDF'iniz farklı okuyuculara nasıl görünüyor?</a></li><li><a href="#">CV'nizde görünmeyen metin var mı?</a></li><li><a href="#">Dosyanız sizin hakkınızda ne söylüyor?</a></li><li><a href="#">Kimliğinizi ele veren satırları çıkarın</a></li></ul></div>
+<div class="dough card"><span class="blob d-sun"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2B2140" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg></span><h3>Bu ilana başvuracağım</h3><p>CV'nizi ilana göre kontrol edin, başvurunuzu hazırlayın.</p>
+<ul><li><a href="#">CV ve ilan eşleştirme</a></li><li><a href="#">CV'yi ilana göre uyarla</a></li><li><a href="#">Ön yazı hazırla</a></li><li><a href="#">İlan okuyucu</a></li><li><a href="#">Başvuru takibi</a></li><li><a href="#">Mülakat hazırlığı</a></li></ul></div>
+<div class="dough card"><span class="blob d-sky"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2B2140" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span><h3>Almanya'ya taşınıyorum</h3><p>Kaynakları, teklifleri ve maaşı karşılaştırın.</p>
+<ul><li><a href="#">Almanya'da iş kaynakları</a></li><li><a href="#">Teklif karşılaştırma</a></li><li><a href="#">Almanya maaş hesaplama</a></li><li><a href="#">Kariyer rotası</a></li><li><a href="#">Taşınma planı</a></li></ul></div>
+</div>
+</div>
+</section>
+
+<section class="block">
+<div class="wrap">
+<h2>CV'nize ne olduğunu açıkça söyleyelim</h2>
+<div class="three">
+<div class="dough card d-lav"><h3>Tarayıcınızda okunur</h3><p style="color:var(--ink)">CV'niz önce sizin tarayıcınızda okunur ve puanlanır.</p></div>
+<div class="dough card d-lav"><h3>12 ay saklanır</h3><p style="color:var(--ink)">Analiz ettiğinizde dosya, metin ve sonuç hesabınıza bağlı olarak saklanır. 12 ay sonra silinir.</p></div>
+<div class="dough card d-lav"><h3>Paylaşımda satır yok</h3><p style="color:var(--ink)">Paylaşım bağlantılarında CV'nizden alınmış satırlar bulunmaz.</p></div>
+</div>
+<p style="margin-top:28px;max-width:720px"><strong>Hesap neden gerekli?</strong> Raporlarınızı ve ilerlemenizi sonra tekrar açabilmeniz için. Ücretsiz, kart istemiyoruz. <a href="#" style="font-weight:800">Gizlilik ayrıntıları</a></p>
+</div>
+</section>
+
+<section class="wrap">
+<div class="dough d-violet final">
+<div><h2>Hazır olduğunuzda ilk adımı atın.</h2><p>Acele yok. İsterseniz önce örnek yolculuğa bakın.</p></div>
+<div style="display:flex;flex-wrap:wrap;gap:14px"><a href="#" class="btn btn-sun">CV'mi yükle</a><a href="#" class="btn btn-soft">Örnek yolculuğu gör</a></div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap row">
+<p>© 2026 affa · Herkes için ücretsiz ATS kontrolü</p>
+<nav aria-label="Alt menü"><a href="#">Gizlilik</a><a href="#">KVKK</a><a href="#">Sık sorulan sorular</a><a href="#">Hakkında</a><a href="#">Gizlilik ayarları</a></nav>
+</div>
+</footer>
+</body>
+</html>
